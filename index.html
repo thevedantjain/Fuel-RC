@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Fuel RC</title>
+	<link rel="stylesheet" type="text/css" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+	<script type="text/javascript">
+
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		// Next/previous controls
+		function plusSlides(n) {
+		  showSlides(slideIndex += n);
+		}
+
+		// Thumbnail image controls
+		function currentSlide(n) {
+		  showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+		  var i;
+		  var slides = document.getElementsByClassName("mySlides");
+		  var dots = document.getElementsByClassName("dot");
+		  if (n > slides.length) {slideIndex = 1} 
+		  if (n < 1) {slideIndex = slides.length}
+		  for (i = 0; i < slides.length; i++) {
+		      slides[i].style.display = "none"; 
+		  }
+		  for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  }
+		  slides[slideIndex-1].style.display = "block"; 
+		  dots[slideIndex-1].className += " active";
+		}
+
+		var slideIndex = 0;
+		showSlides();
+
+		function showSlides() {
+		    var i;
+		    var slides = document.getElementsByClassName("mySlides");
+		    var dots = document.getElementsByClassName("dot");
+		    for (i = 0; i < slides.length; i++) {
+		        slides[i].style.display = "none"; 
+		    }
+		    slideIndex++;
+		   	for (i = 0; i < dots.length; i++) {
+		      dots[i].className = dots[i].className.replace(" active", "");
+		  	}
+		    if (slideIndex > slides.length) {slideIndex = 1} 
+		    slides[slideIndex-1].style.display = "block"; 
+			dots[slideIndex-1].className += " active";
+		    setTimeout(showSlides, 2000); // Change image every 2 seconds
+		}
+
+		
+
+	    $(".sp-panel-set").on("swipeleft", function(event){
+	        function plusSlides(n) {
+	    	    showSlides(slideIndex += n);
+	        }
+	    });
+	    $(".sp-panel-set").on("swiperight", function(event){
+	        function plusSlides(n) {
+	        showSlides(slideIndex += n);
+	        }
+	    });
+
+    </script>
+    <div class="logoContainer">
+    	<div class="logoDiv" id="logo1"></div>
+    	<div class="logoDiv" id="logo2"></div>
+    	<div class="logoDiv" id="logo3"></div>
+    </div>
+  <!-- Slideshow container -->
+	<div class="jumbotron">
+	    <div class="slideshow-container">
+
+	      <!-- Full-width images with number and caption text -->
+	      <div class="mySlides fade" id="first">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+
+	      <div class="mySlides fade" id="second">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+
+	      <div class="mySlides fade" id="third">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+	      <div class="mySlides fade" id="fourth">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+
+	      <div class="mySlides fade" id="fifth">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+
+	      <div class="mySlides fade" id="sixth">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+
+	      <div class="mySlides fade" id="seventh">
+	        <!-- <div class="blur"></div> -->
+	        <div class="text"><h3>Caption Heading</h3><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris.</p></div>
+	      </div>
+	    </div>
+	    <br>
+
+	    <!-- The dots/circles -->
+	    <div style="text-align:center">
+	      <span class="dot active" id="firstDot" onclick="currentSlide(1)"></span> 
+	      <span class="dot" onclick="currentSlide(2)"></span> 
+	      <span class="dot" onclick="currentSlide(3)"></span>
+	      <span class="dot" onclick="currentSlide(4)"></span> 
+	      <span class="dot" onclick="currentSlide(5)"></span> 
+	      <span class="dot" onclick="currentSlide(6)"></span> 
+	      <span class="dot" onclick="currentSlide(7)"></span>  
+	    </div>
+	</div>
+	<div class="descContainer">
+		<div class="desc"><h3>Caption Heading</h3><p>BizzVenture, an entrepreneurship summit, is the featured event of TechTatva '18. BizzVenture aims at promoting and fostering the entrepreneurial spirit among students and provides platforms to the budding entrepreneurs to convert their dreams into reality. This event consists of two rounds and a workshop. Click below to download the abstract format for the first round, and submit your own abstract via the form.</p></div>
+		<div class="button" id="button1"><h3>Rule Book</h3></div>
+		<div class="button" id="button2"><h3>Form</h3></div>
+	</div>
+	<script type="text/javascript" src="supercool.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="slick/slick.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function(){
+        $('.slideshow-container').slick({
+          mobileFirst: true
+        });
+      });
+    </script>
+</body>
+</html>
